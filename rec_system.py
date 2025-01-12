@@ -57,7 +57,7 @@ class MovieDataset(Dataset):
         "movies": torch.tensor(movies),
         "ratings": torch.tensor(ratings)
     }
-    class RecModel(nn.Module):
+class RecModel(nn.Module):
   def __init__(self, n_users, n_movies):
     super().__init__()
     self.users_emb = nn.Embedding(n_users, 32)
